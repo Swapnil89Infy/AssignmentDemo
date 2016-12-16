@@ -1,0 +1,378 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C30E996E1E03AC1600D86406 /* ConnectionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C30E996D1E03AC1600D86406 /* ConnectionHandler.m */; };
+		C36529C41E0110CC00F20310 /* InfoCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C36529C31E0110CC00F20310 /* InfoCustomCell.m */; };
+		C36529CF1E025F9600F20310 /* TableInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C36529CE1E025F9600F20310 /* TableInfo.m */; };
+		C399E3111DFFE00B006C49DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C399E3101DFFE00B006C49DC /* main.m */; };
+		C399E3141DFFE00B006C49DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C399E3131DFFE00B006C49DC /* AppDelegate.m */; };
+		C399E3171DFFE00B006C49DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C399E3161DFFE00B006C49DC /* ViewController.m */; };
+		C399E31A1DFFE00B006C49DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C399E3181DFFE00B006C49DC /* Main.storyboard */; };
+		C399E31F1DFFE00B006C49DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C399E31E1DFFE00B006C49DC /* Assets.xcassets */; };
+		C399E3221DFFE00B006C49DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C399E3201DFFE00B006C49DC /* LaunchScreen.storyboard */; };
+		C3FF6F761E03F71800D0AF69 /* defaultImages.png in Resources */ = {isa = PBXBuildFile; fileRef = C3FF6F751E03F71800D0AF69 /* defaultImages.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C30E996C1E03AC1600D86406 /* ConnectionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionHandler.h; sourceTree = "<group>"; };
+		C30E996D1E03AC1600D86406 /* ConnectionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionHandler.m; sourceTree = "<group>"; };
+		C36529C21E0110CC00F20310 /* InfoCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoCustomCell.h; sourceTree = "<group>"; };
+		C36529C31E0110CC00F20310 /* InfoCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoCustomCell.m; sourceTree = "<group>"; };
+		C36529CD1E025F9600F20310 /* TableInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableInfo.h; sourceTree = "<group>"; };
+		C36529CE1E025F9600F20310 /* TableInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableInfo.m; sourceTree = "<group>"; };
+		C399E30C1DFFE00B006C49DC /* Telstra Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Telstra Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C399E3101DFFE00B006C49DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C399E3121DFFE00B006C49DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C399E3131DFFE00B006C49DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C399E3151DFFE00B006C49DC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C399E3161DFFE00B006C49DC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C399E3191DFFE00B006C49DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C399E31E1DFFE00B006C49DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C399E3211DFFE00B006C49DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C399E3231DFFE00B006C49DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3FF6F751E03F71800D0AF69 /* defaultImages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultImages.png; sourceTree = "<group>"; };
+		C3FF6F781E03FA6900D0AF69 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C399E3091DFFE00B006C49DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C399E3031DFFE00B006C49DC = {
+			isa = PBXGroup;
+			children = (
+				C399E30E1DFFE00B006C49DC /* Telstra */,
+				C399E30D1DFFE00B006C49DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C399E30D1DFFE00B006C49DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C399E30C1DFFE00B006C49DC /* Telstra Assignment.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C399E30E1DFFE00B006C49DC /* Telstra */ = {
+			isa = PBXGroup;
+			children = (
+				C3FF6F741E03F6C700D0AF69 /* CustomCell */,
+				C3FF6F731E03F53200D0AF69 /* Controller */,
+				C3FF6F721E03F52F00D0AF69 /* Handler */,
+				C3FF6F711E03F52C00D0AF69 /* Model */,
+				C399E3121DFFE00B006C49DC /* AppDelegate.h */,
+				C399E3131DFFE00B006C49DC /* AppDelegate.m */,
+				C3FF6F751E03F71800D0AF69 /* defaultImages.png */,
+				C399E3181DFFE00B006C49DC /* Main.storyboard */,
+				C399E31E1DFFE00B006C49DC /* Assets.xcassets */,
+				C399E3201DFFE00B006C49DC /* LaunchScreen.storyboard */,
+				C399E3231DFFE00B006C49DC /* Info.plist */,
+				C399E30F1DFFE00B006C49DC /* Supporting Files */,
+				C3FF6F781E03FA6900D0AF69 /* Constant.h */,
+			);
+			name = Telstra;
+			path = MyApp;
+			sourceTree = "<group>";
+		};
+		C399E30F1DFFE00B006C49DC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C399E3101DFFE00B006C49DC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C3FF6F711E03F52C00D0AF69 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C36529CD1E025F9600F20310 /* TableInfo.h */,
+				C36529CE1E025F9600F20310 /* TableInfo.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C3FF6F721E03F52F00D0AF69 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				C30E996C1E03AC1600D86406 /* ConnectionHandler.h */,
+				C30E996D1E03AC1600D86406 /* ConnectionHandler.m */,
+			);
+			name = Handler;
+			sourceTree = "<group>";
+		};
+		C3FF6F731E03F53200D0AF69 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C399E3151DFFE00B006C49DC /* ViewController.h */,
+				C399E3161DFFE00B006C49DC /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C3FF6F741E03F6C700D0AF69 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				C36529C21E0110CC00F20310 /* InfoCustomCell.h */,
+				C36529C31E0110CC00F20310 /* InfoCustomCell.m */,
+			);
+			name = CustomCell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C399E30B1DFFE00B006C49DC /* Telstra Assignment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C399E3261DFFE00B006C49DC /* Build configuration list for PBXNativeTarget "Telstra Assignment" */;
+			buildPhases = (
+				C399E3081DFFE00B006C49DC /* Sources */,
+				C399E3091DFFE00B006C49DC /* Frameworks */,
+				C399E30A1DFFE00B006C49DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Telstra Assignment";
+			productName = MyApp;
+			productReference = C399E30C1DFFE00B006C49DC /* Telstra Assignment.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C399E3041DFFE00B006C49DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = mac_admin;
+				TargetAttributes = {
+					C399E30B1DFFE00B006C49DC = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C399E3071DFFE00B006C49DC /* Build configuration list for PBXProject "Telstra Assignment" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C399E3031DFFE00B006C49DC;
+			productRefGroup = C399E30D1DFFE00B006C49DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C399E30B1DFFE00B006C49DC /* Telstra Assignment */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C399E30A1DFFE00B006C49DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C399E3221DFFE00B006C49DC /* LaunchScreen.storyboard in Resources */,
+				C399E31F1DFFE00B006C49DC /* Assets.xcassets in Resources */,
+				C399E31A1DFFE00B006C49DC /* Main.storyboard in Resources */,
+				C3FF6F761E03F71800D0AF69 /* defaultImages.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C399E3081DFFE00B006C49DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C30E996E1E03AC1600D86406 /* ConnectionHandler.m in Sources */,
+				C399E3171DFFE00B006C49DC /* ViewController.m in Sources */,
+				C36529CF1E025F9600F20310 /* TableInfo.m in Sources */,
+				C399E3141DFFE00B006C49DC /* AppDelegate.m in Sources */,
+				C399E3111DFFE00B006C49DC /* main.m in Sources */,
+				C36529C41E0110CC00F20310 /* InfoCustomCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C399E3181DFFE00B006C49DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C399E3191DFFE00B006C49DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C399E3201DFFE00B006C49DC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C399E3211DFFE00B006C49DC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C399E3241DFFE00B006C49DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C399E3251DFFE00B006C49DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C399E3271DFFE00B006C49DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = MyApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Test.MyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C399E3281DFFE00B006C49DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = MyApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Test.MyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C399E3071DFFE00B006C49DC /* Build configuration list for PBXProject "Telstra Assignment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C399E3241DFFE00B006C49DC /* Debug */,
+				C399E3251DFFE00B006C49DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C399E3261DFFE00B006C49DC /* Build configuration list for PBXNativeTarget "Telstra Assignment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C399E3271DFFE00B006C49DC /* Debug */,
+				C399E3281DFFE00B006C49DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C399E3041DFFE00B006C49DC /* Project object */;
+}
