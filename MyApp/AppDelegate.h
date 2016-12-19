@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ViewController.h"
+#import "DetailViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (retain, nonatomic) ViewController *viewController;
+@property (retain, nonatomic) DetailViewController *viewController;
 
 - (void)saveContext;
 

@@ -22,4 +22,11 @@
     return self;
 }
 
+-(id) setData:(NSDictionary *)infoDict
+{
+    [self setTitle:[infoDict objectForKey:@"title"]];
+    [self setDescriptionDetail:[infoDict objectForKey:@"description"]];
+    [self setImgUrl:[infoDict objectForKey:@"imageHref"]];
+    return self;
+}
 @end

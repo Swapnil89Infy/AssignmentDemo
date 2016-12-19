@@ -10,39 +10,30 @@
 
 @implementation ConnectionHandler
 
-
--(id)init{
-    if ( self = [super init] ) {
-        NSURL *url = [NSURL URLWithString:@"https://dl.dropboxusercontent.com/u/746330/facts.json"];
-        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-        NSURLResponse * response = nil;
-        NSError * error = nil;
-        NSData * data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-        
-        NSString *string = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
-        NSData* mainData = [string dataUsingEncoding:NSUTF8StringEncoding];
-        _jsonData = [NSJSONSerialization JSONObjectWithData:mainData options:NSJSONReadingAllowFragments error:nil];
-        _dataArray = [_jsonData valueForKey:@"rows"];
-        _titleHeader = [_jsonData valueForKey:@"title"];
-        
-        [self setDataToObject];
-        return self;
-    } else
-        return nil;
-}
-
--(void)setDataToObject
++ (void)makeConnection:(NSURLRequest *)aRequest callingService:(id)aService
 {
-    _detailDataArray = [[NSMutableArray alloc]init];
-    for(int i=0; i < _dataArray.count ; i++)
-    {
-        TableInfo *infoData = [[TableInfo alloc]init];
-        
-        NSDictionary *tempDict = [_dataArray objectAtIndex:i];
-        [infoData setTitle:[tempDict objectForKey:@"title"]];
-        [infoData setDescriptionDetail:[tempDict objectForKey:@"description"]];
-        [infoData setImgUrl:[tempDict objectForKey:@"imageHref"]];
-        [_detailDataArray addObject:infoData];
-    }
+    NSLog(@"REQUEST WEB SERVICE URL : %@", aRequest.URL.absoluteString);
+    NSLog(@"REQUEST JSON : %@", [[NSString alloc] initWithData:aRequest.HTTPBody encoding:NSASCIIStringEncoding]);
+    
+    NSURLSession *tSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    
+    NSURLSessionDataTask *tPostRequestTask = [tSession dataTaskWithRequest:aRequest
+                                                         completionHandler:^(NSData *tData, NSURLResponse *tResponse, NSError *tError) {
+                                                             
+                                                             if(tError == nil) {
+                                                                 if([aService conformsToProtocol:@protocol(ServiceLayerProtocol)]) {
+                                                                     [aService onDataReceived:tData];
+                                                                 }
+                                                                 [tSession finishTasksAndInvalidate];
+                                                             }
+                                                             else {
+                                                                 if([aService conformsToProtocol:@protocol(ServiceLayerProtocol)]) {
+                                                                     [aService onError:tError];
+                                                                 }
+                                                                 [tSession finishTasksAndInvalidate];
+                                                             }
+                                                             
+                                                         }];
+    [tPostRequestTask resume];
 }
 @end

@@ -8,12 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "TableInfo.h"
+#import "DetailsService.h"
+#import "ServiceLayerProtocol.h"
 
-@interface ConnectionHandler : NSObject<NSURLSessionDelegate>
+@interface ConnectionHandler : NSObject
 
-@property(nonatomic, strong)NSDictionary *jsonData;
-@property(nonatomic, strong)NSArray *dataArray;
-@property(nonatomic, strong)NSMutableArray *detailDataArray;
-@property(nonatomic, strong)NSString *titleHeader;
++ (void)makeConnection:(NSURLRequest *)request callingService:(id)service;
 
 @end

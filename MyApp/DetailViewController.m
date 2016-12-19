@@ -6,31 +6,67 @@
 //  Copyright © 2016 mac_admin. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "DetailViewController.h"
+#import "Utility.h"
 
 
+@interface DetailViewController ()
 
-
-@interface ViewController ()
+@property(nonatomic, strong)NSArray *detailArray;
+@property(nonatomic, strong)NSString *titleHeader;
 
 @end
 
-@implementation ViewController
+@implementation DetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    connectionHandler = [[ConnectionHandler alloc]init];
-    _detailArray = connectionHandler.detailDataArray;
-    [self setUI];
+    if (![Utility connectedToNetwork])
+    {
+        UIAlertView *statusUpdatedAlert = [[UIAlertView alloc] initWithTitle:@"No Network Connection" message:@"No network connection. Please try connecting to the Internet." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [statusUpdatedAlert show];
+        statusUpdatedAlert = nil;
+    }
+    else {
+        loadingIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        loadingIndicator.center = self.view.center;
+        
+        [self.view addSubview:loadingIndicator];
+        [loadingIndicator startAnimating];
+        
+        DetailsService *detailService = [DetailsService new];
+        [detailService fetch:nil];
+        [detailService setDelegate:self];
+    }
+    
+}
+
+
+- (void)detailResultHandler:(NSArray *)detailInfo :(NSString *)titleHeader
+{
+    [loadingIndicator stopAnimating];
+    _titleHeader = titleHeader;
+    _detailArray = detailInfo;
+    dispatch_async(dispatch_get_main_queue(),^{
+        [self setUI];
+    });
+}
+
+- (void)onError:(NSError *)error
+{
+    UIAlertView *statusUpdatedAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Some Thing Wrong Happend" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [statusUpdatedAlert show];
+    statusUpdatedAlert = nil;
 
 }
+
 
 -(void)setUI
 {
     UINavigationBar *navbar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, NavigationBar_Height)];
     UINavigationItem *navItem = [UINavigationItem alloc];
-    navItem.title = connectionHandler.titleHeader;
+    navItem.title = _titleHeader;
     [navbar pushNavigationItem:navItem animated:false];
     [self.view addSubview:navbar];
     
@@ -55,9 +91,21 @@
 
 -(void)reloadDatas
 {
-    [infoTable reloadData];
-    [refreshControl endRefreshing];
+    if (![Utility connectedToNetwork])
+    {
+        UIAlertView *statusUpdatedAlert = [[UIAlertView alloc] initWithTitle:@"No Network Connection" message:@"No network connection. Please try connecting to the Internet." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [statusUpdatedAlert show];
+        statusUpdatedAlert = nil;
+    }
+    else
+    {
+        DetailsService *detailService = [DetailsService new];
+        [detailService fetch:nil];
+        [detailService setDelegate:self];
+        [refreshControl endRefreshing];
+    }
 }
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -102,9 +150,9 @@
     CGSize constraint = CGSizeMake([UIScreen mainScreen].bounds.size.width - 70, CGFLOAT_MAX);
     CGSize size;
     
-    NSDictionary *tempDict = [connectionHandler.dataArray objectAtIndex:indexPath.row];
-    NSString *description = [[NSString alloc]initWithFormat:@"%@",tempDict[@"description"]];
-    
+    TableInfo *dataObject = [_detailArray objectAtIndex:indexPath.row];
+    NSString *description = [[NSString alloc]initWithFormat:@"%@",dataObject.descriptionDetail];
+
     NSStringDrawingContext *context = [[NSStringDrawingContext alloc] init];
     CGSize boundingBox = [description boundingRectWithSize:constraint
                                                    options:NSStringDrawingUsesLineFragmentOrigin
